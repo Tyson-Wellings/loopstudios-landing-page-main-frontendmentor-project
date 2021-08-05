@@ -1,0 +1,327 @@
+:root {
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+*{
+    font-size: 15px;
+}
+
+main,body,p,h1{
+    margin: 0;
+    padding: 0; 
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+p{
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    color: var(--Dark-Gray);
+    font-size: 15px;
+}
+
+.logo{
+    width: 135.4px;
+    height: 22.4px;
+}
+
+.logo path{
+    transform: scale(0.7);
+}
+
+header{
+    background: url(images/mobile/image-hero.jpg) no-repeat;
+    background-size: max(100%, 375px);
+    min-width: 100%;
+    background-position: top;
+    box-sizing: border-box;
+    position: relative;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+header .logo{
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    width: 135.4px;
+    height: 22.4px;
+    z-index: 9;
+}
+
+header .logo path{
+    transform: scale(0.7);
+}
+
+.hamburger-toggle{
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    z-index: 8;
+}
+
+#nav-close{
+    display: none;
+}
+
+#hamburger-toggle-controller{
+    margin: 0;
+    width: 24px; 
+    height: 16px;
+    z-index: 9;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+}
+
+#hamburger-toggle-controller:checked ~ #nav-close{
+    display: inline-block;
+}
+
+#hamburger-toggle-controller:checked ~ #hamburger{
+    display: none;
+}
+
+
+
+#navigation-container{
+    display: block;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 6;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    
+}
+
+#hamburger-toggle-controller:checked ~ #navigation-container{
+    display: block;
+    opacity: 1;
+}
+
+#nav-relative-wrapper{
+    position: relative;
+    height: inherit;
+    width: inherit;
+}
+
+nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-links{
+    color: rgb(236, 235, 235);
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 2rem;
+    display: block;
+    padding: 20px 0 0 20px;
+
+    
+
+}
+
+#slogan{
+    box-sizing: border-box;
+    width: 100%; 
+    position: relative;
+    border: 2px solid white;
+    padding: 15px; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+#slogan h1{
+    font-size: calc(1rem + 7vw); 
+    
+}
+
+#introduction{
+    width: 100%;
+    padding: 80px 20px 40px 20px;
+    box-sizing: border-box;
+
+
+}
+
+#intro-image{
+    width: 100%;
+}
+
+#intro-copy-wrapper{
+    padding: 0 20px;
+    text-align: center;
+}
+
+#intro-copy-wrapper h1{
+    color: black;
+    padding: 40px 0 20px 0;
+}
+
+#intro-copy-wrapper p{
+    line-height: 2rem;
+}
+
+#our-creations-wrapper{
+    padding: 0 20px;
+}
+    
+#our-creations-wrapper h1{
+    color: black;
+    padding:20px 20px 40px 20px;
+    text-align: center;
+}
+
+.grid-item{
+    width: 100%;
+}
+
+.grid-link{
+    padding: 60px calc(100% - 140px) 20px 20px;
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgba(0,0,0,0.3)
+}
+
+#deep-earth{
+    background: url(images/mobile/image-deep-earth.jpg) no-repeat;
+    background-size: auto 100%;
+    grid-area: deep-earth;
+}
+
+#night-arcade{
+    background: url(images/mobile/image-night-arcade.jpg) no-repeat;
+    background-size: auto 100%;
+    grid-area: night-arcade;
+}
+
+#soccer-team{
+    background: url(images/mobile/image-soccer-team.jpg) no-repeat;
+    background-size: auto 100%;
+    grid-area: soccer-team;
+}
+
+#the-grid{
+    background: url(images/mobile/image-grid.jpg) no-repeat;
+    background-size: auto 100%;
+    grid-area: the-grid;
+}
+
+#from-up-above{
+    background: url(images/mobile/image-from-above.jpg) no-repeat;
+    background-size: auto 100%;
+    grid-area: from-up-above;
+}
+
+#pocket-borealis{
+    background: url(images/mobile/image-pocket-borealis.jpg) no-repeat;
+    background-size: auto 100%;
+    grid-area: pocket-borealis;
+}
+
+#the-curiosity{
+    background: url(images/mobile/image-curiosity.jpg) no-repeat;
+    background-size: auto 100%;
+    grid-area: the-curiosity;
+}
+
+#fisheye{
+    background: url(images/mobile/image-fisheye.jpg) no-repeat;
+    background-size: auto 100%;
+    grid-area: fisheye;
+}
+
+#grid-wrapper{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat( 8, auto);
+    grid-template-areas:
+    "deep-earth"
+    "night-arcade"
+    "soccer-team"
+    "the-grid"
+    "from-up-above"
+    "pocket-borealis"
+    "the-curiosity"
+    "fisheye";
+    row-gap: 20px;
+}
+
+#see-all-grid-link{
+    text-decoration: none;
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    border: 2px solid black;
+    padding: 10px 30px;
+    display: block;
+    box-sizing: border-box;
+    width: 170px;
+    text-align: center;
+    margin: 40px auto;
+}
+
+footer{
+    background-color: black;
+    padding: 40px 0 80px 0; 
+    text-align: center;
+}
+
+#footer-links-container{
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(auto, 5);
+    row-gap: 20px;
+
+}
+
+.footer-link{
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+}
+
+#social-media-icon-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    width: 160px;
+    margin: 0 auto 20px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
