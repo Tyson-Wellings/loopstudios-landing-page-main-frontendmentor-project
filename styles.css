@@ -12,6 +12,11 @@ main,body,p,h1{
     padding: 0; 
 }
 
+body{
+    position: relative;
+    z-index: 5s;
+}
+
 h1{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
@@ -37,23 +42,23 @@ p{
 }
 
 header{
-    background: url(images/mobile/image-hero.jpg) no-repeat;
-    background-size: max(100%, 375px);
     min-width: 100%;
     background-position: top;
     box-sizing: border-box;
-    position: relative;
-    height: 100vh;
-    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    height: 650px;
+    z-index: 7;
+    background-color:rgba(0,0,0,0)
 }
-
 header .logo{
     position: absolute;
     left: 20px;
-    top: 40px;
+    top: 20px;
     width: 135.4px;
     height: 22.4px;
     z-index: 9;
+    
 }
 
 header .logo path{
@@ -63,7 +68,7 @@ header .logo path{
 .hamburger-toggle{
     position: absolute;
     right: 20px;
-    top: 40px;
+    top: 20px;
     z-index: 8;
 }
 
@@ -97,7 +102,8 @@ header .logo path{
     width: 100%;
     position: absolute;
     left: 0;
-    z-index: 6;
+    top: 0;
+    z-index: 7;
     height: 100vh;
     opacity: 0;
     transition: opacity 0.4s ease;
@@ -135,6 +141,19 @@ nav{
 
 }
 
+#hero-container{
+    background: url(images/mobile/image-hero.jpg) no-repeat;
+    background-size: max(100%, 375px);
+    min-width: 100%;
+    background-position: top;
+    box-sizing: border-box;
+    position: relative;
+    height: 650px;
+    padding: 0 20px;
+    top: 0;
+    z-index: 5;
+}
+
 #slogan{
     box-sizing: border-box;
     width: 100%; 
@@ -149,6 +168,21 @@ nav{
 #slogan h1{
     font-size: calc(1rem + 7vw); 
     
+}
+#main-content-minus-hero{
+    position: relative;
+    top: -64px;
+    z-index: 6;
+}
+
+#fixed-nav-background{
+    background: url(images/mobile/image-hero.jpg) no-repeat;
+    background-size: max(100%, 375px);
+    background-position: center bottom;
+    height: 64px;
+    width: 100%;
+    position: sticky;
+    top: 0;
 }
 
 #introduction{
