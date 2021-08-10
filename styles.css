@@ -324,6 +324,7 @@ nav{
     width: 6rem;
     text-align: center;
     margin: 3rem auto;
+    color: black;
 }
 
 footer{
@@ -547,6 +548,7 @@ footer{
         margin: 0 auto;
         height: 0.25rem;
         display: block;
+        border-bottom: 2px solid rgba(0,0,0,0)
     }
 
     *{
@@ -698,15 +700,19 @@ footer{
         grid-area: links;
         display: inline-block;
         text-align: left;
-        align-self: start;
+        align-self: end;
         align-items: start;
-        padding: 2rem 0;
+        padding: 0;
+        margin-top: -.25rem;
     }
 
     .footer-link{
         display: inline-block;
         width: auto;
         padding-right: 2rem;
+        height: auto;
+        line-height: 1rem;
+        font-size: 1rem;
     }
 
     .footer-link:hover .hover-underline{
