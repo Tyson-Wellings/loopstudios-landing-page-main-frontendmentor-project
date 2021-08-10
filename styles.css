@@ -71,6 +71,10 @@ header .logo{
     display: none;
 }
 
+.hover-underline{
+    display: none;
+}
+
 #hamburger-toggle-controller{
     margin: 0;
     width: 24px; 
@@ -139,6 +143,7 @@ nav{
     background-image: url(images/mobile/image-hero.jpg);
     background-size: max(100%, 375px);
     min-width: 100%;
+    background-repeat: no-repeat;
     background-position: center bottom;
     box-sizing: border-box;
     position: relative;
@@ -344,7 +349,7 @@ footer{
     font-weight: 400;
 }
 
-#social-media-icon-wrapper{
+#social-media-icon-container{
     display: flex;
     justify-content: space-evenly;
     width: 160px;
@@ -419,7 +424,7 @@ footer{
 
         width: 75%;
         position: relative;
-        top: -6rem;
+        bottom: 6rem;
         padding: 0;
         
     }
@@ -457,19 +462,12 @@ footer{
         text-align: left;
         padding: 0 0 2rem 0;
     }
-
-    .grid-item{
-        width: calc((100vw - 5.5rem)/4);
-        height: calc(((100vw - 5.5rem)/2) - 2rem);
-        margin: 0 auto;
-        background-size: cover;
-    }
     
     .grid-link{
         box-sizing: border-box;
         height: 100%;
         width: 100%;
-        padding: calc(((100vw - 5.5rem)/2) - 5rem) 0 1.5rem 1rem;
+        padding: calc(((100vw - 5.5rem)/4)*1.737 - 3rem) 0 1.5rem 1rem;
         box-sizing: border-box;
         font-size: min( 1rem, 35px);
         line-height: min( 1rem, 35px);
@@ -511,12 +509,13 @@ footer{
 
     #grid-wrapper{
         grid-template-columns: repeat( 4,calc((100vw - 5.5rem)/4));
-        grid-template-rows: repeat( 2, calc((100vw - 5.5rem)/2));
+        grid-template-rows: repeat( 2, calc(((100vw - 5.5rem)/4)*1.737));
         grid-template-areas:
         "deep-earth night-arcade soccer-team the-grid"
         "from-up-above pocket-borealis the-curiosity fisheye";
         row-gap: 0.5rem;
         column-gap: 0.5rem;
+        padding-bottom: 100px;
     }
 
     #see-all-grid-link{
@@ -530,6 +529,233 @@ footer{
         box-sizing: border-box;
         line-height: 1rem;
     }
+
+    .grid-item{
+        width: calc((100vw - 5.5rem)/4);
+        height: calc(((100vw - 5.5rem)/4)*1.737);
+        margin: 0 auto;
+        background-size: auto 100%;
+    }
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+
+    .hover-underline{
+        width: 50%;
+        margin: 0 auto;
+        height: 0.25rem;
+        display: block;
+    }
+
+    *{
+        font-size: 1.5vw;
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    #hero-container{
+        padding: 0 10vw;
+    }
+
+    .logo path{
+        transform: scale(1);
+    }
+
+    header{
+        height: 100px;
+    }
+
+    header .logo{
+        left: 10vw;
+        top: 3rem;
+    }
+    .hamburger-toggle{
+        display: none;
+    }
+
+    #navigation-container{
+        opacity: 1;
+        background-color: rgba(0,0,0,0);
+        height: 100px;
+    }
+    nav{
+        top: calc( 3rem + 16px);
+        right: 10vw;
+    }
+
+    .nav-links{
+        font-size: 1rem;
+        font-family: 'Alata', sans-serif;
+        font-weight: 400;
+        padding: 0 0 0 2rem; 
+        display: inline-block;
+        text-transform: capitalize;
+    }
+
+    .nav-links:hover .hover-underline{
+        border-bottom: 2px solid white ;
+    }
+
+    #slogan{
+        width: 35rem;
+        padding: 3rem;
+    }
+
+    #slogan h1{
+        font-size: min(4rem, 67.5px) ;
+    }
+
+    #introduction{
+        padding: 10vw;
+        position: relative;
+        top: 0;
+        box-sizing: border-box;
+    }
+
+    #intro-image{
+        width: calc( 50% + 10vw);
+    }
+
+    #intro-copy-wrapper{
+        width: calc( 50% - 10vw);
+        text-align: left;
+        padding: 5vw 5vw 0 5vw;
+        background-color: white;
+        position: absolute;
+        bottom: 10vw; 
+        right: 10vw;
+        height: fit-content;
+    }
+
+    #intro-copy-wrapper h1{
+        padding: 0 0 1rem 0;
+    }
+
+    #intro-copy-wrapper p{
+        text-align: left;
+        padding: 0;
+        line-height: 30px;
+    }
+
+    #our-creations-wrapper{
+        margin-top: 0;
+        padding: 0 10vw 5vw 10vw;
+    }
+
+    #see-all-grid-link{
+        box-sizing: initial;
+        width: auto;
+        height: auto;
+        padding: 0.25rem 2rem;
+        line-height: 1.5rem;
+        top: 0;
+        right: 10vw;
+    }
+
+    #see-all-grid-link:hover{
+        background-color: black;
+        color: white;
+    }
+    #grid-wrapper{
+        grid-template-columns: min( calc((80vw - 4.5rem)/4), 256px);;
+        grid-template-rows: min( calc(((80vw - 4.5rem)/4)*1.737), 450px);
+        row-gap: max( 1.5rem, calc((80vw - 1024px)/3));
+        column-gap: max( 1.5rem, calc((80vw - 1024px)/3));
+    }
+
+    .grid-link{
+        padding: min( calc(((80vw - 4.5rem)/4)*1.737 - 4.5rem), calc(450px - 4.5rem)) 0 2rem 2rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .grid-link:hover{
+        background-color: rgba(255, 255, 255, 0.61);
+        color: black;
+    }
+
+    .grid-item{
+        width: min( calc((80vw - 4.5rem)/4), 256px);
+        height: min( calc(((80vw - 4.5rem)/4)*1.737), 450px);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+    }
+
+    footer .logo{
+        grid-area: logo;
+        display: inline-block;
+    }
+    
+    #footer-links-container{
+        grid-area: links;
+        display: inline-block;
+        text-align: left;
+        align-self: start;
+        align-items: start;
+        padding: 2rem 0;
+    }
+
+    .footer-link{
+        display: inline-block;
+        width: auto;
+        padding-right: 2rem;
+    }
+
+    .footer-link:hover .hover-underline{
+        border-bottom: 2px solid white ;
+    }
+    #social-media-icon-container{
+        grid-area: social-media;
+        display: inline-block;
+        width: fit-content;
+        text-align: right;
+        margin: 0;
+        justify-self: end;
+    }
+
+    .social-media-icon-wrapper{
+        padding-left: 2rem;
+        width: auto;
+        display: inline-block;
+    }
+
+    .social-media-icon-wrapper .hover-underline{
+        width: 100%;
+    }
+
+    .social-media-icon-wrapper:hover .hover-underline{
+        border-bottom: 2px solid white ;
+    }
+
+   #copyrights{
+       grid-area: copyrights;
+       display: inline-block;
+       padding: 2rem 0;
+       text-align: right;
+
+   }
+
+    footer{
+        display: grid;
+        padding: 2rem 10vw;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: 32px calc( 20px + 2rem);
+        height: auto;
+        grid-template-areas: 
+        "logo social-media"
+        "links copyrights";
+    }
+
+
+
 }
 
 
