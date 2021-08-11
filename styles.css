@@ -233,6 +233,7 @@ nav{
 }
 
 .grid-link{
+    text-decoration: none;
     height: min(45.138vw - 3rem, 120px);
     width: min( 100%, 327px);
     box-sizing: border-box;
@@ -552,7 +553,7 @@ footer{
     }
 
     *{
-        font-size: 1.5vw;
+        font-size: 15px;
     }
 
     p{
@@ -560,11 +561,11 @@ footer{
     }
 
     h1{
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     #hero-container{
-        padding: 0 10vw;
+        padding: 0 max(10vw, calc((100vw - 1091px)/2));
     }
 
     .logo path{
@@ -576,7 +577,7 @@ footer{
     }
 
     header .logo{
-        left: 10vw;
+        left: max(10vw, calc((100vw - 1091px)/2));
         top: 3rem;
     }
     .hamburger-toggle{
@@ -590,7 +591,7 @@ footer{
     }
     nav{
         top: calc( 3rem + 16px);
-        right: 10vw;
+        right: max(10vw, calc((100vw - 1091px)/2));
     }
 
     .nav-links{
@@ -616,7 +617,7 @@ footer{
     }
 
     #introduction{
-        padding: 10vw;
+        padding: 10vw max(10vw, calc((100vw - 1091px)/2));
         position: relative;
         top: 0;
         box-sizing: border-box;
@@ -649,17 +650,18 @@ footer{
 
     #our-creations-wrapper{
         margin-top: 0;
-        padding: 0 10vw 5vw 10vw;
+        padding: 0 max(10vw, calc((100vw - 1091px)/2)) 5vw max(10vw, calc((100vw - 1091px)/2));
     }
 
     #see-all-grid-link{
+        font-size: 1.5rem;
         box-sizing: initial;
         width: auto;
         height: auto;
-        padding: 0.25rem 2rem;
+        padding: 0.5rem 2rem;
         line-height: 1.5rem;
         top: 0;
-        right: 10vw;
+        right: max(10vw, calc((100vw - 1091px)/2));
     }
 
     #see-all-grid-link:hover{
@@ -669,14 +671,16 @@ footer{
     #grid-wrapper{
         grid-template-columns: min( calc((80vw - 4.5rem)/4), 256px);;
         grid-template-rows: min( calc(((80vw - 4.5rem)/4)*1.737), 450px);
-        row-gap: max( 1.5rem, calc((80vw - 1024px)/3));
-        column-gap: max( 1.5rem, calc((80vw - 1024px)/3));
+        row-gap: 1.5rem;
+        column-gap: 1.5rem;
+        margin: 0 auto; 
+        width: fit-content;
     }
 
     .grid-link{
-        padding: min( calc(((80vw - 4.5rem)/4)*1.737 - 4.5rem), calc(450px - 4.5rem)) 0 2rem 2rem;
-        font-size: 1.5rem;
-        line-height: 1.5rem;
+        padding: min( calc(((80vw - 4.5rem)/4)*1.737 - 6.5rem), calc(450px - 5.5rem)) 0 2rem 2rem;
+        font-size: 2rem;
+        line-height: 2rem;
     }
 
     .grid-link:hover{
@@ -751,7 +755,7 @@ footer{
 
     footer{
         display: grid;
-        padding: 2rem 10vw;
+        padding: 2rem max(10vw, calc((100vw - 1091px)/2));
         grid-template-columns: 1.5fr 1fr;
         grid-template-rows: 32px calc( 20px + 2rem);
         height: auto;
